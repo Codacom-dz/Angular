@@ -1,0 +1,12 @@
+* Installez Node.js, Angular CLI sur Ubuntu 18.04
+   Préparer une  plate-forme  pour les applications Angular qui permet
+   aux utilisateurs de créer des applications réseau rapidement.
+
+1) [ ]  Nodejs
+2) [ ] Angular CIL
+
+** Installer  Nodejs
+*** $ sudo apt update
+*** $ sudo apt install nodejs
+*** $ sudo apt install npm
+** Installer Angular CLI
