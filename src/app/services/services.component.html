@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-4">
+    <app-service-list (serviceWasSelected)="serviceSelected=$event"></app-service-list>
+  </div>
+  <div class="col-md-7">
+    <app-service-detail *ngIf="serviceSelected; else TextInfo"
+
+[service]="serviceSelected"></app-service-detail>
+
+    <ng-template #TextInfo>
+      <p> please select a service</p>
+    </ng-template>
+
+
+  </div>
+
+</div>

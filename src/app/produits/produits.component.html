@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-4">
+    <app-produit-list (produitWasSelected)="onSelectedProduit=$event"
+
+
+    ></app-produit-list>
+
+  </div>
+  <div class="col-md-7">
+    <app-produit-detail *ngIf="onSelectedProduit; else TextInfo"
+      [produit]="onSelectedProduit"
+    ></app-produit-detail>
+
+    <ng-template #TextInfo>
+
+      <p>Please select produit</p>
+    </ng-template>
+
+  </div>
+
+</div>
