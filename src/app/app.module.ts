@@ -14,8 +14,8 @@ import { ServiceItemComponent } from './services/service-list/service-item/servi
 import { ServiceDetailComponent } from './services/service-detail/service-detail.component';
 import { ProduitItemComponent } from './produits/produit-list/produit-item/produit-item.component';
 import { ProduitDetailComponent } from './produits/produit-detail/produit-detail.component';
-
-
+import { ServiceService } from './services/service.service';
+import { ProduitSrevice } from './produits/produit.service';
 
 
 
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ServiceService, ProduitSrevice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

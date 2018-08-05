@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Produit } from './../produit.model';
-
+import { ProduitSrevice } from './../produit.service';
 @Component({
   selector: 'app-produit-list',
   templateUrl: './produit-list.component.html',
@@ -8,15 +8,16 @@ import { Produit } from './../produit.model';
 })
 export class ProduitListComponent implements OnInit {
   @Output() produitWasSelected = new EventEmitter<Produit>();
-  produits: Produit[] = [
-    new Produit('produit test', 'produit  testr2', 'produit test3'),
-    new Produit('produit test2', 'produit  testr5', 'produit test4')
-  ]
+  produits: Produit[];
+  constructor(private produitService: ProduitSrevice) {
 
+  }
+  ngOnInit() {
+    this.produits = this.produitService.getProduit();
+  }
   onSelectedProduit(produit: Produit) {
     this.produitWasSelected.emit(produit);
   }
-  ngOnInit() {
-  }
+
 
 }

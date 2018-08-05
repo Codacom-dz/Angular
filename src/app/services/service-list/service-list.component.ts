@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Service } from '../service.model';
+import { ServiceService } from './../service.service';
 @Component({
   selector: 'app-service-list',
   templateUrl: './service-list.component.html',
@@ -8,21 +9,16 @@ import { Service } from '../service.model';
 export class ServiceListComponent implements OnInit {
   @Output() serviceWasSelected = new EventEmitter<Service>();
 
-  services: Service[] = [
+  services: Service[];
+  constructor(private serviceService: ServiceService) {
 
-    new Service('premier servies', 'deuxieme services', 'troixieme servies'),
-    new Service('premier s', 'deuxieme s', 'troixieme s'),
-
-  ]
-
+  }
+  ngOnInit() {
+    this.services = this.serviceService.getServices();
+  }
   onServiceSelected(service: Service) {
     this.serviceWasSelected.emit(service);
   }
 
-
-
-
-  ngOnInit() {
-  }
 
 }
