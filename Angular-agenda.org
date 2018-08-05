@@ -10,3 +10,18 @@
 *** $ sudo apt install nodejs
 *** $ sudo apt install npm
 ** Installer Angular CLI
+* Services module
+** Something about
+ apré avoir créer un service on fait l'insertion de ce dernier dans le
+praincipale composent par example recipe.component et touts les autre comme
+recipe-list and recipe-detail peuve accéder au service
+** example
+
+import {RecipeService} from './';
+@Component{(
+...
+...
+...
+providers: [RecipeService]
+
+)}
