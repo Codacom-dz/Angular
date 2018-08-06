@@ -25,3 +25,10 @@ import {RecipeService} from './';
 providers: [RecipeService]
 
 )}
+* utilitises
+** Plugins for wordpress
+- WPGlobus for  multiluanges
+- wpDiscuz for comments protection
+- Slider Revolution
+- Contact Fomr 7
+- google.com/recaptcha
