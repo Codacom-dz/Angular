@@ -32,11 +32,6 @@ providers: [RecipeService]
 - Slider Revolution
 - Contact Fomr 7
 - google.com/recaptcha
-
-
-
-
-
-
+- https://understrap.com/ 
 UPDATE `wp_options` SET `option_value`="http://localhost/fr/" WHERE `option_id`=2
 
