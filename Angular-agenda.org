@@ -32,3 +32,5 @@ providers: [RecipeService]
 - Slider Revolution
 - Contact Fomr 7
 - google.com/recaptcha
+  UPDATE `wp_options` SET `option_value`="https://www.localhost.com/fr/" WHERE `option_value`="https://www.intervalle-technologies.com/fr/" 
+
