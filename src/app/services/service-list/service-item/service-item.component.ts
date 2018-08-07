@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Service } from './../../service.model';
+import { ServiceService } from './../../service.service';
 @Component({
   selector: 'app-service-item',
   templateUrl: './service-item.component.html',
@@ -7,15 +8,15 @@ import { Service } from './../../service.model';
 })
 export class ServiceItemComponent implements OnInit {
   @Input() service: Service;
-  @Output() serviceSelected = new EventEmitter<void>();
-  constructor() { }
+
+  constructor(private serviceService: ServiceService) { }
 
   ngOnInit() {
   }
 
 
   onSelected() {
-    this.serviceSelected.emit();
+    this.serviceService.serviceSelected.emit(this.service);
   }
 
 }

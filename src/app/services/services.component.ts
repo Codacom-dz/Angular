@@ -10,9 +10,16 @@ import { ServiceService } from './service.service';
 export class ServicesComponent implements OnInit {
   @Input() serviceSelected: Service;
 
-  constructor() { }
+  constructor(private serviceService: ServiceService) { }
 
   ngOnInit() {
+    this.serviceService.serviceSelected
+      .subscribe(
+      (service: Service) => {
+        this.serviceSelected = service;
+      }
+      );
+
   }
 
 }

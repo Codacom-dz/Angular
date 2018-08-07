@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Service } from '../service.model';
 import { ServiceService } from './../service.service';
 @Component({
@@ -7,7 +7,7 @@ import { ServiceService } from './../service.service';
   styleUrls: ['./service-list.component.css']
 })
 export class ServiceListComponent implements OnInit {
-  @Output() serviceWasSelected = new EventEmitter<Service>();
+
 
   services: Service[];
   constructor(private serviceService: ServiceService) {
@@ -15,9 +15,6 @@ export class ServiceListComponent implements OnInit {
   }
   ngOnInit() {
     this.services = this.serviceService.getServices();
-  }
-  onServiceSelected(service: Service) {
-    this.serviceWasSelected.emit(service);
   }
 
 
