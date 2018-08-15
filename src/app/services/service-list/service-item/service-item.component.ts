@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Service } from './../../service.model';
 import { ServiceService } from './../../service.service';
+
 @Component({
   selector: 'app-service-item',
   templateUrl: './service-item.component.html',
