@@ -4,8 +4,8 @@
 
   </div>
   <div class="col-md-7">
-    <app-produit-detail *ngIf="onSelectedProduit; else TextInfo"
-      [produit]="onSelectedProduit"
+    <app-produit-detail *ngIf="produitSelected; else TextInfo"
+      [produit]="produitSelected"
     ></app-produit-detail>
 
     <ng-template #TextInfo>

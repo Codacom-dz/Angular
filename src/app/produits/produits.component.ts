@@ -1,10 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProduitService } from './produit.service';
 import { Produit } from './produit.model';
+import { ProduitService } from './produit.service';
+
 @Component({
   selector: 'app-produits',
   templateUrl: './produits.component.html',
   styleUrls: ['./produits.component.css']
+  
 })
 export class ProduitsComponent implements OnInit {
   @Input() produitSelected: Produit;
