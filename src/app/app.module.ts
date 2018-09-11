@@ -16,6 +16,12 @@ import { ProduitItemComponent } from './produits/produit-list/produit-item/produ
 import { ProduitDetailComponent } from './produits/produit-detail/produit-detail.component';
 import { ServiceService } from './services/service.service';
 import { ProduitService } from './produits/produit.service';
+import { DocumentsComponent } from './documents/documents.component';
+import { DocumentListComponent } from './documents/document-list/document-list.component';
+import { DocumentItemComponent } from './documents/document-list/document-item/document-item.component';
+import { DocumentDetailComponent } from './documents/document-detail/document-detail.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 
 
@@ -40,6 +46,12 @@ const appRoutes: Routes = [
     ServiceDetailComponent,
     ProduitItemComponent,
     ProduitDetailComponent,
+    DocumentsComponent,
+    DocumentListComponent,
+    DocumentItemComponent,
+    DocumentDetailComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
 
   ],
   imports: [
