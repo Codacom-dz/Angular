@@ -1,5 +1,4 @@
 export class Produit {
-
   public name: string;
   public description: string;
   public image: string;
